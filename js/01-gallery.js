@@ -32,9 +32,12 @@ galarisEl.addEventListener('click', (event) => {
 `)
   window.addEventListener('keydown', event => {
     if (event.code === 'Escape') {
-        instance.close();
+      instance.close();
+      
     }
-    console.log(event);
+    window.removeEventListener('keydown', event);
+    
+    // console.log(event);
   });
   
   instance.show()
