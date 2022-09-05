@@ -12,11 +12,6 @@ const galarisСards = galleryItems.map((el) => {
    return  onGalari(el)
 });
 
-// galarisEl.addEventListener('click', (event) => {
-
-//   instance.show()
-// })
-
 galarisEl.insertAdjacentHTML("afterbegin", galarisСards.join(''));
 console.log(galleryItems);
 
