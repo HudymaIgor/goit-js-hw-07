@@ -30,15 +30,16 @@ galarisEl.addEventListener('click', (event) => {
       <img src='${event.target.dataset.source}'/>
     </div>
 `)
-  window.addEventListener('keydown', event => {
+  const onEscep =  event => {
     if (event.code === 'Escape') {
       instance.close();
       
     }
-    window.removeEventListener('keydown', event);
-    
-    // console.log(event);
-  });
+    window.removeEventListener('keydown', onEscep);
+    // console.log();
+  }
+  
+  window.addEventListener('keydown', onEscep);
   
   instance.show()
 })
